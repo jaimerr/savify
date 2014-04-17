@@ -14,7 +14,8 @@ output = fs.readFileSync('index.html');
 response.write(output);
 response.end();
 });
-server.listen(8080);
+var port = process.env.PORT || 8080;
+server.listen(port);
 /*
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
